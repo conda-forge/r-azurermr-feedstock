@@ -1,4 +1,4 @@
-{% set version = '2.4.3' %}
+{% set version = "2.4.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/AzureRMR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/AzureRMR/AzureRMR_{{ version }}.tar.gz
-  sha256: 810e8f290bd4a94c4cfb755ccc4c44da0a716d1db36b0f1d114e9a267a7fd01c
+  sha256: e0e8df49898fd35db4f2cca4570a5708c555967b2c5b3cf557e185b96261b226
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -49,12 +49,8 @@ test:
 about:
   home: https://github.com/Azure/AzureRMR https://github.com/Azure/AzureR
   license: MIT
-  summary: A lightweight but powerful R interface to the 'Azure Resource Manager' REST API. The
-    package exposes a comprehensive class framework and related tools for creating,
-    updating and deleting 'Azure' resource groups, resources and templates. While 'AzureRMR'
-    can be used to manage any 'Azure' service, it can also be extended by other packages
-    to provide extra functionality for specific services. Part of the 'AzureR' family
-    of packages.
+  summary: A lightweight but powerful R interface to the 'Azure Resource Manager' REST API. The package exposes a comprehensive class framework and related tools for creating, updating and deleting 'Azure' resource groups, resources and templates. While 'AzureRMR' can be used to manage any 'Azure' service, it can also be
+    extended by other packages to provide extra functionality for specific services. Part of the 'AzureR' family of packages.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
