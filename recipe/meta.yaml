@@ -1,4 +1,4 @@
-{% set version = "2.4.4" %}
+{% set version = "2.4.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/AzureRMR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/AzureRMR/AzureRMR_{{ version }}.tar.gz
-  sha256: e0e8df49898fd35db4f2cca4570a5708c555967b2c5b3cf557e185b96261b226
+  sha256: 10f80f9745c09519e7452255ebc2ed26d2c0d945a31e76a1cc6f80e428e17b7c
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
